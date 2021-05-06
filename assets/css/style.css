@@ -1521,6 +1521,7 @@ section {
 
 .portfolio-details .portfolio-description {
   padding-top: 50px;
+  text-align: center;
 }
 
 .portfolio-details .portfolio-description h2 {
@@ -1528,10 +1529,12 @@ section {
   font-size: 26px;
   font-weight: 700;
   margin-bottom: 20px;
+  text-align: left;
 }
 
 .portfolio-details .portfolio-description p {
   padding: 0 0 0 0;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
@@ -1606,3 +1609,14 @@ section {
 .row{
   text-align: justify;
 }
+.intelli{
+  text-align: center;
+}
+
+hr{
+  background-color: #bd5102;
+}
+.bal{
+  text-align: left;
+}
+
