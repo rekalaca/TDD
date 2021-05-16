@@ -103,20 +103,88 @@
 
         <div class="section-title" data-aos="zoom-out">
           <h2>1. feladat</h2>
-          <p>Itt lesz,hogy mit tesztelünk benne...</p>
+          <p>Testtömegindex (BMI) számítás</p>
         </div>
 
         <div class="row content" data-aos="fade-up">
           <div class="col-lg-6">
             <p>
-              A teszt feladat dokumentációja, levezetése, szemléltetése lesz itt...
+              A BMI (testtömegindex, Body Mass Index) egy mérőszám, amely megmutatja, hogy egy felnőtt ember sovány,
+              normál súlyú, vagy esetleg elhízott.
+            <div class="portfolio-img"><img src="assets/img/bmi.JPG" class="img-fluid" alt=""></div>
+            (a kép forrása:<a href="https://hu.wikipedia.org/wiki/Testt%C3%B6megindex" target="_blanc"> wikipedia</a>)
             </p>
+            <p>
+              <u>TDD szoftvertesztelés / Projektmunka 1.feladat:</u>
+              <br>
+              Testtömeg-index számítása.
+              Készítsen metódust a következő feladat megoldására a TDD szabályok betartásával! A
+              lépések végrehajtását itt kell dokumentálnia. A dokumentációban a lépések leírása mellett ki
+              kell fejteni, hogy mit miért és hogyan csinált! Egy projektben kell megvalósítani a feladatok
+              megoldását és a szükséges egyéb dolgokat!
+              <br><br>
+              Ismerjük egy felnőtt ember magasságát és súlyát. A metódus számolja ki a testtömeg-indexét!
+              Figyelem! A magasság 0,54m – 2,72m között lehet, a súly pedig 19,5 kg – 635 kg között elfogadható!
+              Megjegyzés az adatokhoz: A világ valaha élt legmagasabb és legalacsonyabb embere:
+              Robert Pershing Wadlow: 2,72 méter / Csandra Bahadur Dangi 0,54 méter
+              Illetve a legkövérebb és legsoványabb férfija:
+              Jon Brower Minnoch: 635 kg / Isaac Sprague: 19,5 kg
+            </p>
+            <p>
+              <u>Dokumentáció lépésről lépésre:</u><br><br>
+              1. A súly lehetséges értékei 19,5 – 635-ig tartó valós számok, a magasság 0,54 – 2,72 közötti valós
+              számok.
+              <br>
+              2. Ha nem megfelelő szám érkezik a súlyra, vagy a magasságra, akkor -1 értéket adunk vissza, ha
+              megfelelőek az értékek, akkor kg/m2 értket.
+              <br><br>
+              3. Értékpárok:
+            <ul>
+              <li>a, mindkettő kisebb a minimumnál -> -1</li>
+              <li>b, magasság nagyobb, súly kisebb -> -1</li>
+              <li>c, mindkettő nagyobb -> -1
+              <li>d, magasság kisebb a minimumnál, súly nagyobb -> -1</li>
+              <li>e, magasság kisebb, súly jó -> -1</li>
+              <li>f, magasság jó, súly kisebb -> -1</li>
+              <li>g, magasság jó, súly nagyobb -> -1</li>
+              <li>h, magasság nagyobb, súly jó -> -1</li>
+              <li>i, mindkettő érték 0 -> -1</li>
+              <li>j, egyik 0, másik negatív -> -1</li>
+              <li>k, mindkettő negatív -> -1</li>
+              <li>l, egyik jó, másik 0 -> -1</li>
+              <li>m, egyik jó, másik negatív -> -1</li>
+              <li>n, helyes értékpárok</li>
+            </ul>
+            4. Tesztesetek megírása a programban
+            <br>
+            5. Produkciós kód a programban
+            <br>
+            6. Minden teszt ZÖLD
+            </p>
+            <hr>
 
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
-            <p>Itt pedig maga a kódsor, metódus...
+            <p>IntelliJ IDEA programban készült a feladat megoldása.
+              <br>
+              Itt láthatod a teszteseteket és a produkciós kódot is:
+            </p>
+            <br>
+            <p>
+            <div class="portfolio-img"><img src="assets/img/feladat1a.JPG" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="assets/img/feladat1b.JPG" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="assets/img/feladat1c.JPG" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="assets/img/feladat1d.JPG" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="assets/img/feladat1e.JPG" class="img-fluid" alt=""></div>
+            </p>
+            <br>
+            <p>
+              A képek nagyításához válaszd a jobb egérgomb "kép megnyitása új lapon" lehetőséget!"
+              A feladatokat a megoldásokkal a lap alján található link segítségével bármikor, egyben letöltheted!
             </p>
             <a href="#feladat2" class="btn-learn-more">Ugrás a következő feladatra!</a>
+            <br>
+            <hr>
           </div>
         </div>
 
