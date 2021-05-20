@@ -68,7 +68,11 @@
           <h2 class="animate__animated animate__fadeInDown">A két tesztelési feladat megoldása</h2>
           <p class="animate__animated fanimate__adeInUp">A projektmunka része két tetszőlegesen választott tesztelési
             feladat megvalósítása.
-            Az egyikben egy....tesztelünk, a másikban azt vizsgáljuk meg, hogy...
+            Az elsőben a <a href="#feladat">testtömeg index</a> kiszámítására szolgáló metódust teszteljük, a másikban
+            pedig a helyes <a href="#feladat1">email cím</a>
+            formátumot ellenőrizzük le. Bónuszban készült még 2 feladat a háromszögekkel kapcsolatban. Az egyik azt
+            határozza meg, hogy <a href="#feladat3">megszerkeszthető</a> e? Míg a
+            másik a <a href="#feladat4">háromszög típusát</a> határozza meg.
           </p>
           <a href="#feladat" class="btn-get-started animate__animated animate__fadeInUp scrollto">Lássam a
             feladatokat!</a>
@@ -161,7 +165,6 @@
             <br>
             6. Minden teszt ZÖLD
             </p>
-            <hr>
 
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
@@ -184,11 +187,11 @@
             </p>
             <a href="#feladat2" class="btn-learn-more">Ugrás a következő feladatra!</a>
             <br>
-            <hr>
           </div>
         </div>
 
       </div>
+      <hr>
     </section>
 
     <section id="feladat2" class="about">
@@ -196,32 +199,257 @@
 
         <div class="section-title" data-aos="zoom-out">
           <h2>2. feladat</h2>
-          <p>Itt lesz,hogy mit tesztelünk benne...</p>
+          <p>Email cím formátumának teszteése</p>
         </div>
 
         <div class="row content" data-aos="fade-up">
           <div class="col-lg-6">
             <p>
-              A teszt feladat dokumentációja, levezetése, szemléltetése lesz itt...
+              Egy email cím helyes formátuma úgy néz ki, hogy 1 db @ karaktert tartalmaz, illetve minimum egy darab pont
+              is van benne.
+              <br>
+              Nem lehet benne ékezetes betű, illetve szóköz. Nagy betű az lehet benne, mert azt úgyis átkonvertálja a
+              rendszer kisbetűkre.
+            </p>
+            <div class="portfolio-img"><img src="assets/img/email.jpg" class="img-fluid" alt=""></div>
+            <br>
+            <p>
+              <u>TDD szoftvertesztelés / Projektmunka 2.feladat:</u>
+              <br>
+              Döntsük el, hogy a megadott email cím, megfelelő-e!
+              <br>
+              Készítsen metódust a következő feladat megoldására a TDD szabályok betartásával! A
+              lépések végrehajtását itt kell dokumentálnia. A dokumentációban a lépések leírása mellett ki
+              kell fejtenie, hogy mit miért és hogyan csinált! Egy projektben kell megvalósítani a feladatok
+              megoldását és a szükséges egyéb dolgokat!
+              <br>
+              Egy email cím akkor felel meg a követelményeknek, ha tartalmaz 1 darab ’@’ karaktert és legalább 1 darab
+              ’.’ karaktert. Ezen kívül nincs benne ékezetes betű, illetve szóköz sem.
+              <br>
+            </p>
+            <p>
+              <u>Dokumentáció lépésről lépésre:</u><br><br>
+              1. A megadott érték String típusú
+              <br>
+              2. Ha nem megfelelő érték érkezik akkor „nem jó email” értéket adunk vissza, ha megfelelő, akkor „jó email
+              cím” a válasz.
+              <br>
+              3. Értelmezési tartomány szöveg = String
+              <br>
+              4. Érték készlet szintén String, jó, vagy nem jó a formátum.
+              <br>
+            <ul>
+              <li>a, nem tartalmaz sem @, sem . karaktert -> „nem jó email”</li>
+              <li>b, csak az egyik karaktert tartalmazza, a másikat nem -> „nem jó email”</li>
+              <li>c, @ karakterből többet tartalmaz mint 1 -> „nem jó email”</li>
+              <li>d, ékezetes karaktert tartalmaz -> „nem jó email”</li>
+              <li>e, szóköz szerepel benne -> „nem jó email”</li>
+              <li>f, helyes érték -> „jó email cím”</li>
+            </ul>
+            5. Tesztesetek megírása a programban
+            <br>
+            6. Produkciós kód a programban
+            <br>
+            7. Minden teszt ZÖLD
+            </p>
+            <br><br>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <p>IntelliJ IDEA programban készült a feladat megoldása.
+              <br>
+              Itt láthatod a teszteseteket és a produkciós kódot is:
+            </p>
+            <p>
+            <div class="portfolio-img"><img src="assets/img/feladat2a.JPG" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="assets/img/feladat2b.JPG" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="assets/img/feladat2c.JPG" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="assets/img/feladat2d.JPG" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="assets/img/feladat2e.JPG" class="img-fluid" alt=""></div>
+            </p>
+            <p>
+              A képek nagyításához válaszd a jobb egérgomb "kép megnyitása új lapon" lehetőséget!"
+              A feladatokat a megoldásokkal a lap alján található link segítségével bármikor, egyben letöltheted!
+            </p>
+            <a href="#feladat3" class="btn-learn-more">Ugrás a következő feladatra!</a>
+          </div>
+        </div>
+      </div>
+      <hr>
+    </section>
+    <section id="feladat3" class="about">
+      <div class="container">
+
+        <div class="section-title" data-aos="zoom-out">
+          <h2>3. feladat</h2>
+          <p>Háromszög szerkeszthetőségének tesztelése</p>
+        </div>
+
+        <div class="row content" data-aos="fade-up">
+          <div class="col-lg-6">
+            <p>
+              Egy háromszög megszerkeszthető, ha bármely oldalának hossza kisebb a másik két oldal hosszának összegénél.
+              <br>
+              Tehát a < b + c, vagy b < a + c, illetve c < a + b <br>
+                <div class="portfolio-img"><img src="assets/img/haromszog.jpg" class="img-fluid" alt=""></div>
+                (a kép forrása:<a
+                  href="http://kalauzolo.hu/online-tanulas/geometria-haromszog-kerulete-es-terulete-matek-6-osztaly-video/"
+                  target="_blanc"> #kalauzoló</a>)
+            </p>
+            <p>
+              <u>TDD szoftvertesztelés / Projektmunka 3.feladat:</u>
+              <br><br>
+              Döntsük el hogy szerkeszthető-e vagy nem a háromszög, ha szerkeszthető, akkor térjen vissza a Kerület
+              értékével.
+              <br><br>
+              Készítsen metódust a következő feladat megoldására a TDD szabályok betartásával! A
+              lépések végrehajtását itt kell dokumentálnia. A dokumentációban a lépések leírása mellett ki
+              kell fejtenie, hogy mit miért és hogyan csinált! Egy projektben kell megvalósítani a feladatok
+              megoldását és a szükséges egyéb dolgokat!
+              <br>
+              <br>Ismerjük a háromszög 3 oldalának a hosszát. A háromszög szerkeszthető, ha bármelyik két oldal
+              hosszának az összege nagyobb, mint a harmadik oldal hossza.
+              <br>
+            </p>
+            <p>
+              <u>Dokumentáció lépésről lépésre:</u><br><br>
+              1. A háromszög oldalainak hossz értékei 1-100 közötti egész számok legyenek a feladatban.
+              <br>
+              2. Ha nem megfelelő szám érkezik akkor -1 értéket adjon vissza a függvény, ha megfelelőek az értékek,
+              akkor a háromszög kerületének értékével térjen vissza.
+              <br>
+              3. Értékpárok:
+              <br>
+            <ul>
+              <li>a, mindhárom érték negatív szám-> -1</li>
+              <li>b, bármelyik érték negatív szám -> -1</li>
+              <li>c, mindhárom érték nagyobb a maximumnál -> -1</li>
+              <li>d, bármelyik érték nagyobb a maximumnál -> -1</li>
+              <li>e, nulla érték -> -1</li>
+              <li>f, bármelyik két oldal hosszának az összege nem nagyobb mint a harmadik oldal hossza ->-1</li>
+              <li>g, helyes értékpárok</li>
+            </ul>
+            4. Tesztesetek megírása a programban
+            <br>
+            5. Produkciós kód a programban
+            <br>
+            6. Minden teszt ZÖLD
+            </p>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <p>IntelliJ IDEA programban készült a feladat megoldása.
+              <br>
+              Itt láthatod a teszteseteket és a produkciós kódot is:
+            </p>
+            <p>
+            <div class="portfolio-img"><img src="assets/img/feladat3a.JPG" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="assets/img/feladat3b.JPG" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="assets/img/feladat3c.JPG" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="assets/img/feladat3d.JPG" class="img-fluid" alt=""></div>
+            </p>
+            <p>
+              A képek nagyításához válaszd a jobb egérgomb "kép megnyitása új lapon" lehetőséget!"
+              A feladatokat a megoldásokkal a lap alján található link segítségével bármikor, egyben letöltheted!
+            </p>
+            <a href="#feladat4" class="btn-learn-more">Ugrás a következő feladatra!</a>
+            <br><br>
+          </div>
+        </div>
+      </div>
+      <hr>
+    </section>
+    <section id="feladat4" class="about">
+      <div class="container">
+
+        <div class="section-title" data-aos="zoom-out">
+          <h2>4. feladat</h2>
+          <p>Háromszög típus meghatározásának tesztelése</p>
+        </div>
+
+        <div class="row content" data-aos="fade-up">
+          <div class="col-lg-6">
+            <p>
+              Az <b>általános</b> háromszög minden oldala különböző hosszú, és belső szögei is különbözőek.
+              <br>
+              Az <b>egyenlő szárú</b> háromszögnek legalább két oldala azonos hosszúságú. Egyben két belső szöge is
+              ugyanakkora (az alapon fekvő szögek).
+              <br>
+              Az <b>egyenlő oldalú</b> háromszög, vagy szabályos háromszög minden oldala azonos hosszúságú. Egyben
+              minden belső szöge is ugyanakkora, mégpedig 60°, szabályos sokszög.
+            <div class="portfolio-img"><img src="assets/img/haromtipus.JPG" class="img-fluid" alt=""></div>
+            (a kép forrása:<a href="https://hu.wikipedia.org/wiki/H%C3%A1romsz%C3%B6g" target="_blanc">Wikipedia</a>)
+            </p>
+            <p>
+              <u>TDD szoftvertesztelés / Projektmunka 4.feladat:</u>
+              <br><br>
+              Döntsük el, hogy a szerkeszthető háromszög milyen háromszög!
+              <br><br>
+              Készítsen metódust a következő feladat megoldására a TDD szabályok betartásával! A
+              lépések végrehajtását itt kell dokumentálnia. A dokumentációban a lépések leírása mellett ki
+              kell fejtenie, hogy mit miért és hogyan csinált! Egy projektben kell megvalósítani a feladatok
+              megoldását és a szükséges egyéb dolgokat!
+              <br><br>
+              Ismerjük a háromszög 3 oldalának a hosszát. A háromszög szerkeszthető, ha bármelyik két oldal hosszának az
+              összege nagyobb, mint a harmadik oldal hossza. A háromszögek csoportosítása oldalaik hosszúsága szerint:
+              Általános háromszög: ez egy olyan háromszög, amelynek mind a 3 oldala különböző hosszúságú.
+              Egyenlő szárú háromszög: Ennek a háromszögnek két oldala egyenlő hosszúságú.
+              Szabályos háromszög: Ebben a háromszögben minden oldal egyenlő hosszúságú.
+
+              <br>
+              <br>Ismerjük a háromszög 3 oldalának a hosszát. A háromszög szerkeszthető, ha bármelyik két oldal
+              hosszának az összege nagyobb, mint a harmadik oldal hossza.
+              <br>
+            </p>
+            <p>
+              <u>Dokumentáció lépésről lépésre:</u><br><br>
+              1. A háromszög oldalainak hossz értékei pozitív egész számok legyenek a feladatban.
+              <br>
+              2. Ha nem megfelelő szám érkezik akkor „nem háromszög” értékkel tér vissza, ha megfelelőek az értékek,
+              akkor vizsgálja, hogy általános, egyenlő szárú vagy szabályos háromszög-e?
+              <br>
+              3. Értékpárok:
+              <br>
+            <ul>
+              <li>a, akármelyik értéke kisebb mint 0 ->"nem háromszög”</li>
+              <li>b, ha akármelyik értéke 0 -> „nem háromszög”</li>
+              <li>c, 3 jó érték, de nem szerkeszthető a háromszög -> "nem háromszög”</li>
+              <li>d, helyes értékpárok </li>
+            </ul>
+            4. Tesztesetek megírása a programban
+            <br>
+            5. Produkciós kód a programban
+            <br>
+            6. Minden teszt ZÖLD
             </p>
 
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
-            <p>Itt pedig maga a kódsor, metódus...
+            <p>IntelliJ IDEA programban készült a feladat megoldása.
+              <br>
+              Itt láthatod a teszteseteket és a produkciós kódot is:
             </p>
-            <a href="#" class="btn-learn-more">Ugrás az elejére</a>
+            <p>
+            <div class="portfolio-img"><img src="assets/img/feladat4a.JPG" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="assets/img/feladat4b.JPG" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="assets/img/feladat4c.JPG" class="img-fluid" alt=""></div>
+            </p>
+            <p>
+              A képek nagyításához válaszd a jobb egérgomb "kép megnyitása új lapon" lehetőséget!"
+              A feladatokat a megoldásokkal a lap alján található link segítségével bármikor, egyben letöltheted!
+            </p>
+            <a href="index.html" class="btn-learn-more">Ugrás a főoldalra!</a>
+            <br><br>
           </div>
         </div>
-
       </div>
+      <hr>
     </section>
-
-
-
-
-
+    <div class="intelli">
+      <p>A négy feladat egyben, egy projektben letölthető innen!</p>
+      <div class="portfolio-img"><a href="doc/tdd_feladatok.zip"><img src="assets/img/download.png" class="img-fluid"
+            alt=""></a></div>
+      <br>
+    </div>
   </main>
-
 
   <footer id="footer">
     <div class="container">
