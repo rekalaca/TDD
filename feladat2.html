@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Test-driven development/TDD/</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+
+  <link href="img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Selecao - v2.3.1
+  * Template URL: https://bootstrapmade.com/selecao-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  * Created the content:Juhászné Kovács Ildikó & Rékási László
+  ======================================================== -->
+</head>
+
+<body>
+
+
+  <header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
+    <div class="container d-flex align-items-center">
+
+      <div class="logo mr-auto">
+        <h1 class="text-light"><a href="index.html"><img src="img/logo2.jpg" alt="" class="img-fluid"></a></h1>
+      </div>
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="index.html">Vissza a főoldalra!</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <section id="hero" class="d-flex flex-column justify-content-end align-items-center">
+    <div id="heroCarousel" class="container carousel carousel-fade" data-ride="carousel">
+
+
+      <div class="carousel-item active">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">A két tesztelési feladat megoldása</h2>
+          <p class="animate__animated fanimate__adeInUp">A projektmunka része két tetszőlegesen választott tesztelési
+            feladat megvalósítása.
+            Az elsőben a testtömeg index kiszámítására szolgáló metódust teszteljük, a másikban
+            pedig a helyes email cím formátumot ellenőrizzük le. Bónuszban készült még 2 feladat a háromszögekkel kapcsolatban. Az egyik azt
+            határozza meg, hogy megszerkeszthető e? Míg a
+            másik a háromszög típusát határozza meg.
+          </p>
+          <a href="#feladat2" class="btn-get-started animate__animated animate__fadeInUp scrollto">Lássam a
+            feladatot!</a>
+        </div>
+      </div>
+
+    </div>
+
+    <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 24 150 28 " preserveAspectRatio="none">
+      <defs>
+        <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
+      </defs>
+      <g class="wave1">
+        <use xlink:href="#wave-path" x="50" y="3" fill="rgba(255,255,255, .1)">
+      </g>
+      <g class="wave2">
+        <use xlink:href="#wave-path" x="50" y="0" fill="rgba(255,255,255, .2)">
+      </g>
+      <g class="wave3">
+        <use xlink:href="#wave-path" x="50" y="9" fill="#fff">
+      </g>
+    </svg>
+
+  </section>
+
+  <main id="main">
+
+
+    <section id="feladat2" class="about">
+        <div class="container">
+  
+          <div class="section-title" data-aos="zoom-out">
+            <h2>2. feladat</h2>
+            <p>Email cím formátumának teszteése</p>
+          </div>
+  
+          <div class="row content" data-aos="fade-up">
+            <div class="col-lg-6">
+              <p>
+                Egy email cím helyes formátuma úgy néz ki, hogy 1 db @ karaktert tartalmaz, illetve minimum egy darab pont
+                is van benne.
+                <br>
+                Nem lehet benne ékezetes betű, illetve szóköz. Nagy betű az lehet benne, mert azt úgyis átkonvertálja a
+                rendszer kisbetűkre.
+              </p>
+              <div class="portfolio-img"><img src="assets/img/email.jpg" class="img-fluid" alt=""></div>
+              <br>
+              <p>
+                <u>TDD szoftvertesztelés / Projektmunka 2.feladat:</u>
+                <br>
+                Döntsük el, hogy a megadott email cím, megfelelő-e!
+                <br>
+                Készítsen metódust a következő feladat megoldására a TDD szabályok betartásával! A
+                lépések végrehajtását itt kell dokumentálnia. A dokumentációban a lépések leírása mellett ki
+                kell fejtenie, hogy mit miért és hogyan csinált! Egy projektben kell megvalósítani a feladatok
+                megoldását és a szükséges egyéb dolgokat!
+                <br>
+                Egy email cím akkor felel meg a követelményeknek, ha tartalmaz 1 darab ’@’ karaktert és legalább 1 darab
+                ’.’ karaktert. Ezen kívül nincs benne ékezetes betű, illetve szóköz sem.
+                <br>
+              </p>
+              <p>
+                <u>Dokumentáció lépésről lépésre:</u><br><br>
+                1. A megadott érték String típusú
+                <br>
+                2. Ha nem megfelelő érték érkezik akkor „nem jó email” értéket adunk vissza, ha megfelelő, akkor „jó email
+                cím” a válasz.
+                <br>
+                3. Értelmezési tartomány szöveg = String
+                <br>
+                4. Érték készlet szintén String, jó, vagy nem jó a formátum.
+                <br>
+              <ul>
+                <li>a, nem tartalmaz sem @, sem . karaktert -> „nem jó email”</li>
+                <li>b, csak az egyik karaktert tartalmazza, a másikat nem -> „nem jó email”</li>
+                <li>c, @ karakterből többet tartalmaz mint 1 -> „nem jó email”</li>
+                <li>d, ékezetes karaktert tartalmaz -> „nem jó email”</li>
+                <li>e, szóköz szerepel benne -> „nem jó email”</li>
+                <li>f, helyes érték -> „jó email cím”</li>
+              </ul>
+              5. Tesztesetek megírása a programban
+              <br>
+              6. Produkciós kód a programban
+              <br>
+              7. Minden teszt ZÖLD
+              </p>
+              <br><br>
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0">
+              <p>IntelliJ IDEA programban készült a feladat megoldása.
+                <br>
+                Itt láthatod a teszteseteket és a produkciós kódot is:
+              </p>
+              <p>
+              <div class="portfolio-img"><img src="assets/img/feladat2a.JPG" class="img-fluid" alt=""></div>
+              <div class="portfolio-img"><img src="assets/img/feladat2b.JPG" class="img-fluid" alt=""></div>
+              <div class="portfolio-img"><img src="assets/img/feladat2c.JPG" class="img-fluid" alt=""></div>
+              <div class="portfolio-img"><img src="assets/img/feladat2d.JPG" class="img-fluid" alt=""></div>
+              <div class="portfolio-img"><img src="assets/img/feladat2e.JPG" class="img-fluid" alt=""></div>
+              </p>
+              <p>
+                A képek nagyításához válaszd a jobb egérgomb "kép megnyitása új lapon" lehetőséget!"
+                A feladatokat a megoldásokkal a lap alján található link segítségével bármikor, egyben letöltheted!
+              </p>
+              <a href="feladat3.html" class="btn-learn-more">Ugrás a következő feladatra!</a>
+            </div>
+          </div>
+        </div>
+        <hr>
+      </section>
+
+    
+    <div class="intelli">
+      <p>A négy feladat egyben, egy projektben letölthető innen!</p>
+      <div class="portfolio-img"><a href="doc/tdd_feladatok.zip"><img src="assets/img/download.png" class="img-fluid"
+            alt=""></a></div>
+      <br>
+    </div>
+  </main>
+
+  <footer id="footer">
+    <div class="container">
+      <h3>TDD Projekt munka</h3>
+      <p>Juhászné Kovács Ildikó & Rékási László munkája</p>
+      <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> & <a href="mailto:rekalaca@gmail.com">[
+          rekalaca ]</a>
+          <br>
+          <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Licenc" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Juhászné Kovács Ildikó & Rékási László</span> <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">TDD Edu</span> című műve <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Nevezd meg! 4.0 Nemzetközi Licenc</a> alatt van.                    
+      </div>
+    </div>
+    <div class="ccright">
+      <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Licenc" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Juhászné Kovács Ildikó & Rékási László</span> <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">TDD Edu</span> című műve <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Nevezd meg! 4.0 Nemzetközi Licenc</a> alatt van.            
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
+
+
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
