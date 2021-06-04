@@ -1654,3 +1654,8 @@ hr {
   height: 66px;
   z-index: 9999;
 }
+.balra{
+  text-align: left;
+  font-size: 14px;
+  margin-left: 38px;
+}
