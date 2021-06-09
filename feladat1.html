@@ -43,6 +43,7 @@
 
 
   <header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
+    
     <div class="container d-flex align-items-center">
 
       <div class="logo mr-auto">
@@ -51,7 +52,24 @@
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="index.html">Vissza a főoldalra!</a></li>
+          <li class="active"><a href="index.html">Tartalom</a></li>
+          <li><a href="index.html#about">TDD alapok</a></li>
+          <li><a href="index.html#services">Egységtesztek</a></li>
+          <li><a href="index.html#portfolio">IntelliJ</a></li>
+          <li><a href="index.html#pricing">Refaktorálás</a></li>
+          <li class="drop-down"><a href="">Továbbiak</a>
+            <ul>
+              <li><a href="index.html#faq">GYIK</a></li>
+              <li><a href="feladat1.html">1. Tesztelési feladat</a></li>
+              <li><a href="feladat2.html">2. Tesztelési feladat</a></li>
+              <li><a href="feladat3.html">3. Tesztelési feladat</a></li>
+              <li><a href="feladat4.html">4. Tesztelési feladat</a></li>
+              <li><a href="intellij.html">Egységtesztek IntelliJ</a></li>
+              <li><a href="linkek.html">Hasznos linkek</a></li>
+            </ul>
+          </li>
+          <li><a href="index.html#contact">Kapcsolat</a></li>
+
         </ul>
       </nav>
 
@@ -171,17 +189,86 @@
               <br>
               Itt láthatod a teszteseteket és a produkciós kódot is:
             </p>
-            <br>
             <p>
-            <div class="portfolio-img"><img src="assets/img/feladat1a.JPG" class="img-fluid" alt=""></div>
-            <div class="portfolio-img"><img src="assets/img/feladat1b.JPG" class="img-fluid" alt=""></div>
-            <div class="portfolio-img"><img src="assets/img/feladat1c.JPG" class="img-fluid" alt=""></div>
-            <div class="portfolio-img"><img src="assets/img/feladat1d.JPG" class="img-fluid" alt=""></div>
-            <div class="portfolio-img"><img src="assets/img/feladat1e.JPG" class="img-fluid" alt=""></div>
+            <pre>              
+import org.junit.Test;
+import org.junit.jupiter.api.DisplayName;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+/**
+ * @author rekalaca
+ * @version 1.0
+ */
+
+public class TestTomegTeszt {
+    /**
+     * Lehetséges bemeneti értékek:
+     * súly  : 19,5 – 635
+     * magasság : 0,54 – 2,72
+     * Ha hibás értéket adunk át paraméterként, akkor térjen vissza -1 értékkel
+     * Kategóriák:
+     * - minkettő negatív
+     * - mindkettő nulla
+     * - egyik nulla, másik negatív - 2 esetet jelent
+     * - egyik nulla, másik nagyobb - 2 esetet jelent
+     * - egyik jó, másik negatív - 2 esetet jelent
+     * - egyik jó, másik 0 - 2 esetet jelent
+     * - egyik jó, másik nagyobb - 2 esetet jelent
+     * -egyik jó, másik kisebb - 2 esetet jelent
+     * - mindkettő jó
+     */
+    @Test
+    @DisplayName("Testtömeg-indexet meghatározó metódus tesztelése")
+    public void tesztTomegIndex() {
+        assertEquals(-1, testTomeg(0.5, 18));
+        assertEquals(-1, testTomeg(3.0, 18));
+        assertEquals(-1, testTomeg(3.0, 700));
+        assertEquals(-1, testTomeg(0.5, 700));
+        assertEquals(-1, testTomeg(0.5, 100));
+        assertEquals(-1, testTomeg(1.8, 18));
+        assertEquals(-1, testTomeg(1.8, 700));
+        assertEquals(-1, testTomeg(3.5, 80));
+        assertEquals(-1, testTomeg(0, 0));
+        assertEquals(-1, testTomeg(0, -20));
+        assertEquals(-1, testTomeg(-20, 0));
+        assertEquals(-1, testTomeg(-1, -1));
+        assertEquals(-1, testTomeg(1.8, 0));
+        assertEquals(-1, testTomeg(0, 80));
+        assertEquals(-1, testTomeg(-1, 100));
+        assertEquals(-1, testTomeg(80, -1));
+        assertEquals(25, testTomeg(2.0, 100));
+        assertEquals(21.604938271604937, testTomeg(1.8, 70));
+        assertEquals(26.8595041322314, testTomeg(2.2, 130));
+
+
+    }
+
+    /**
+     * A testtömeg index kiszámítását végző metódus.
+     * @param magassag A felnőtt ember testmagassága
+     * @param suly A ferlnőtt ember testének tömege
+     * @return -1, ha az értékpárok, vagy az értépárok egyik eleme az adott
+     * értékhatáron kívül esik,
+     * különben az eredményt adja vissza.
+     */
+
+
+    private double testTomeg(double magassag, double suly) {
+        if (magassag < 0.54 || suly < 19.5)
+            return -1;
+        if (magassag > 2.72 || suly > 635)
+            return -1;
+        return suly / (magassag * magassag);
+    }
+}
+
+
+
+            </pre>
             </p>
             <br>
             <p>
-              A képek nagyításához válaszd a jobb egérgomb "kép megnyitása új lapon" lehetőséget!"
               A feladatokat a megoldásokkal a lap alján található link segítségével bármikor, egyben letöltheted!
             </p>
             <a href="feladat2.html" class="btn-learn-more">Ugrás a következő feladatra!</a>

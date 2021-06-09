@@ -43,6 +43,7 @@
 
 
   <header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
+
     <div class="container d-flex align-items-center">
 
       <div class="logo mr-auto">
@@ -51,7 +52,24 @@
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="index.html">Vissza a főoldalra!</a></li>
+          <li class="active"><a href="index.html">Tartalom</a></li>
+          <li><a href="index.html#about">TDD alapok</a></li>
+          <li><a href="index.html#services">Egységtesztek</a></li>
+          <li><a href="index.html#portfolio">IntelliJ</a></li>
+          <li><a href="index.html#pricing">Refaktorálás</a></li>
+          <li class="drop-down"><a href="">Továbbiak</a>
+            <ul>
+              <li><a href="index.html#faq">GYIK</a></li>
+              <li><a href="feladat1.html">1. Tesztelési feladat</a></li>
+              <li><a href="feladat2.html">2. Tesztelési feladat</a></li>
+              <li><a href="feladat3.html">3. Tesztelési feladat</a></li>
+              <li><a href="feladat4.html">4. Tesztelési feladat</a></li>
+              <li><a href="intellij.html">Egységtesztek IntelliJ</a></li>
+              <li><a href="linkek.html">Hasznos linkek</a></li>
+            </ul>
+          </li>
+          <li><a href="index.html#contact">Kapcsolat</a></li>
+
         </ul>
       </nav>
 
@@ -69,7 +87,8 @@
           <p class="animate__animated fanimate__adeInUp">A projektmunka része két tetszőlegesen választott tesztelési
             feladat megvalósítása.
             Az elsőben a testtömeg index kiszámítására szolgáló metódust teszteljük, a másikban
-            pedig a helyes email cím formátumot ellenőrizzük le. Bónuszban készült még 2 feladat a háromszögekkel kapcsolatban. Az egyik azt
+            pedig a helyes email cím formátumot ellenőrizzük le. Bónuszban készült még 2 feladat a háromszögekkel
+            kapcsolatban. Az egyik azt
             határozza meg, hogy megszerkeszthető e? Míg a
             másik a háromszög típusát határozza meg.
           </p>
@@ -102,87 +121,138 @@
 
 
     <section id="feladat3" class="about">
-        <div class="container">
-  
-          <div class="section-title" data-aos="zoom-out">
-            <h2>3. feladat</h2>
-            <p>Háromszög szerkeszthetőségének tesztelése</p>
-          </div>
-  
-          <div class="row content" data-aos="fade-up">
-            <div class="col-lg-6">
-              <p>
-                Egy háromszög megszerkeszthető, ha bármely oldalának hossza kisebb a másik két oldal hosszának összegénél.
-                <br>
-                Tehát a < b + c, vagy b < a + c, illetve c < a + b <br>
-                  <div class="portfolio-img"><img src="assets/img/haromszog.jpg" class="img-fluid" alt=""></div>
-                  (a kép forrása:<a
-                    href="http://kalauzolo.hu/online-tanulas/geometria-haromszog-kerulete-es-terulete-matek-6-osztaly-video/"
-                    target="_blanc"> #kalauzoló</a>)
-              </p>
-              <p>
-                <u>TDD szoftvertesztelés / Projektmunka 3.feladat:</u>
-                <br><br>
-                Döntsük el hogy szerkeszthető-e vagy nem a háromszög, ha szerkeszthető, akkor térjen vissza a Kerület
-                értékével.
-                <br><br>
-                Készítsen metódust a következő feladat megoldására a TDD szabályok betartásával! A
-                lépések végrehajtását itt kell dokumentálnia. A dokumentációban a lépések leírása mellett ki
-                kell fejtenie, hogy mit miért és hogyan csinált! Egy projektben kell megvalósítani a feladatok
-                megoldását és a szükséges egyéb dolgokat!
-                <br>
-                <br>Ismerjük a háromszög 3 oldalának a hosszát. A háromszög szerkeszthető, ha bármelyik két oldal
-                hosszának az összege nagyobb, mint a harmadik oldal hossza.
-                <br>
-              </p>
-              <p>
-                <u>Dokumentáció lépésről lépésre:</u><br><br>
-                1. A háromszög oldalainak hossz értékei 1-100 közötti egész számok legyenek a feladatban.
-                <br>
-                2. Ha nem megfelelő szám érkezik akkor -1 értéket adjon vissza a függvény, ha megfelelőek az értékek,
-                akkor a háromszög kerületének értékével térjen vissza.
-                <br>
-                3. Értékpárok:
-                <br>
-              <ul>
-                <li>a, mindhárom érték negatív szám-> -1</li>
-                <li>b, bármelyik érték negatív szám -> -1</li>
-                <li>c, mindhárom érték nagyobb a maximumnál -> -1</li>
-                <li>d, bármelyik érték nagyobb a maximumnál -> -1</li>
-                <li>e, nulla érték -> -1</li>
-                <li>f, bármelyik két oldal hosszának az összege nem nagyobb mint a harmadik oldal hossza ->-1</li>
-                <li>g, helyes értékpárok</li>
-              </ul>
-              4. Tesztesetek megírása a programban
+      <div class="container">
+
+        <div class="section-title" data-aos="zoom-out">
+          <h2>3. feladat</h2>
+          <p>Háromszög szerkeszthetőségének tesztelése</p>
+        </div>
+
+        <div class="row content" data-aos="fade-up">
+          <div class="col-lg-6">
+            <p>
+              Egy háromszög megszerkeszthető, ha bármely oldalának hossza kisebb a másik két oldal hosszának összegénél.
               <br>
-              5. Produkciós kód a programban
-              <br>
-              6. Minden teszt ZÖLD
-              </p>
-            </div>
-            <div class="col-lg-6 pt-4 pt-lg-0">
-              <p>IntelliJ IDEA programban készült a feladat megoldása.
-                <br>
-                Itt láthatod a teszteseteket és a produkciós kódot is:
-              </p>
-              <p>
-              <div class="portfolio-img"><img src="assets/img/feladat3a.JPG" class="img-fluid" alt=""></div>
-              <div class="portfolio-img"><img src="assets/img/feladat3b.JPG" class="img-fluid" alt=""></div>
-              <div class="portfolio-img"><img src="assets/img/feladat3c.JPG" class="img-fluid" alt=""></div>
-              <div class="portfolio-img"><img src="assets/img/feladat3d.JPG" class="img-fluid" alt=""></div>
-              </p>
-              <p>
-                A képek nagyításához válaszd a jobb egérgomb "kép megnyitása új lapon" lehetőséget!"
-                A feladatokat a megoldásokkal a lap alján található link segítségével bármikor, egyben letöltheted!
-              </p>
-              <a href="feladat4.html" class="btn-learn-more">Ugrás a következő feladatra!</a>
+              Tehát a < b + c, vagy b < a + c, illetve c < a + b <br>
+                <div class="portfolio-img"><img src="assets/img/haromszog.jpg" class="img-fluid" alt=""></div>
+                (a kép forrása:<a
+                  href="http://kalauzolo.hu/online-tanulas/geometria-haromszog-kerulete-es-terulete-matek-6-osztaly-video/"
+                  target="_blanc"> #kalauzoló</a>)
+            </p>
+            <p>
+              <u>TDD szoftvertesztelés / Projektmunka 3.feladat:</u>
               <br><br>
-            </div>
+              Döntsük el hogy szerkeszthető-e vagy nem a háromszög, ha szerkeszthető, akkor térjen vissza a Kerület
+              értékével.
+              <br><br>
+              Készítsen metódust a következő feladat megoldására a TDD szabályok betartásával! A
+              lépések végrehajtását itt kell dokumentálnia. A dokumentációban a lépések leírása mellett ki
+              kell fejtenie, hogy mit miért és hogyan csinált! Egy projektben kell megvalósítani a feladatok
+              megoldását és a szükséges egyéb dolgokat!
+              <br>
+              <br>Ismerjük a háromszög 3 oldalának a hosszát. A háromszög szerkeszthető, ha bármelyik két oldal
+              hosszának az összege nagyobb, mint a harmadik oldal hossza.
+              <br>
+            </p>
+            <p>
+              <u>Dokumentáció lépésről lépésre:</u><br><br>
+              1. A háromszög oldalainak hossz értékei 1-100 közötti egész számok legyenek a feladatban.
+              <br>
+              2. Ha nem megfelelő szám érkezik akkor -1 értéket adjon vissza a függvény, ha megfelelőek az értékek,
+              akkor a háromszög kerületének értékével térjen vissza.
+              <br>
+              3. Értékpárok:
+              <br>
+            <ul>
+              <li>a, mindhárom érték negatív szám-> -1</li>
+              <li>b, bármelyik érték negatív szám -> -1</li>
+              <li>c, mindhárom érték nagyobb a maximumnál -> -1</li>
+              <li>d, bármelyik érték nagyobb a maximumnál -> -1</li>
+              <li>e, nulla érték -> -1</li>
+              <li>f, bármelyik két oldal hosszának az összege nem nagyobb mint a harmadik oldal hossza ->-1</li>
+              <li>g, helyes értékpárok</li>
+            </ul>
+            4. Tesztesetek megírása a programban
+            <br>
+            5. Produkciós kód a programban
+            <br>
+            6. Minden teszt ZÖLD
+            </p>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <p>IntelliJ IDEA programban készült a feladat megoldása.
+              <br>
+              Itt láthatod a teszteseteket és a produkciós kódot is:
+            </p>
+<pre>
+  <p>
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+/**
+ * @author koviildi
+ * @version 1.0
+ */
+public class ProjectHaromszSzerk {
+    /**
+     * Lehetséges bemeneti értékek:
+     * háromszög oldalai  : 1 – 100
+     * Ha hibás értéket adunk át paraméterként, akkor térjen vissza -1 értékkel
+     * Kategóriák:
+     * - negatív szám előfordulása
+     * - nulla érték előfordulása
+     * - bármelyik, vagy mindhárom érték nagyobb a maximumnál
+     * - 3 jó érték, de nem szerkeszthető
+     * - mindhárom jó érték, és szerkeszthető
+     */
+    @Test
+    @DisplayName("Háromszög szerkeszthetőségének tesztelése")
+    public void test_haromszogSzerk(){
+        assertEquals(-1, szerk(-1,5,8));
+        assertEquals(-1, szerk(-5,-7,-6));
+        assertEquals(-1, szerk(5,0,7));
+        assertEquals(-1, szerk(0,0,0));
+        assertEquals(-1, szerk(150,190,800));
+        assertEquals(-1, szerk(150,80,90));
+        assertEquals(-1, szerk(10,15,80));
+        assertEquals(-1, szerk(22,3,4));
+        assertEquals(70, szerk(15,25,30));
+    }
+
+    /**
+     * A háromszög szerkeszthetőségének feltételeit vizsgáló metódus.
+     * @param a háromszög egyik oldalának hossza,
+     * @param b a háromszög második oldalának hossza,
+     * @param c a háromszög harmadik oldalának hossza.
+     * @return -1 ha az értékek egyik eleme is az adott értékhatáron kívül esik,
+     * vagy nem teljesül a két oldal összegének feltétele,
+     * különben a Kerület eredményét adja vissza.
+     */
+    private int szerk(int a, int b, int c) {
+        if (a < 1 || b < 1 || c < 1)
+            return -1;
+        if (a > 100 || b > 100 || c > 100)
+            return -1;
+        if (a+b < c || a+c < b || b+c < a)
+            return -1;
+        else
+            return a+b+c;
+
+    }
+}
+  </p>
+</pre>
+            <p>
+              A feladatokat a megoldásokkal a lap alján található link segítségével bármikor, egyben letöltheted!
+            </p>
+            <a href="feladat4.html" class="btn-learn-more">Ugrás a következő feladatra!</a>
+            <br><br>
           </div>
         </div>
-        <hr>
-      </section>
-    
+      </div>
+      <hr>
+    </section>
+
     <div class="intelli">
       <p>A négy feladat egyben, egy projektben letölthető innen!</p>
       <div class="portfolio-img"><a href="doc/tdd_feladatok.zip"><img src="assets/img/download.png" class="img-fluid"
@@ -197,12 +267,22 @@
       <div class="credits">
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> & <a href="mailto:rekalaca@gmail.com">[
           rekalaca ]</a>
-          <br>
-          <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Licenc" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Juhászné Kovács Ildikó & Rékási László</span> <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">TDD Edu</span> című műve <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Nevezd meg! 4.0 Nemzetközi Licenc</a> alatt van.                    
+        <br>
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Licenc"
+            style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span
+          xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Juhászné Kovács Ildikó & Rékási
+          László</span> <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">TDD Edu</span> című műve <a
+          rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Nevezd meg! 4.0 Nemzetközi
+          Licenc</a> alatt van.
       </div>
     </div>
     <div class="ccright">
-      <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Licenc" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Juhászné Kovács Ildikó & Rékási László</span> <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">TDD Edu</span> című műve <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Nevezd meg! 4.0 Nemzetközi Licenc</a> alatt van.            
+      <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Licenc"
+          style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span
+        xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Juhászné Kovács Ildikó & Rékási
+        László</span> <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">TDD Edu</span> című műve <a
+        rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Nevezd meg! 4.0 Nemzetközi
+        Licenc</a> alatt van.
     </div>
   </footer>
 

@@ -43,6 +43,7 @@
 
 
   <header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
+
     <div class="container d-flex align-items-center">
 
       <div class="logo mr-auto">
@@ -51,7 +52,24 @@
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="index.html">Vissza a főoldalra!</a></li>
+          <li class="active"><a href="index.html">Tartalom</a></li>
+          <li><a href="index.html#about">TDD alapok</a></li>
+          <li><a href="index.html#services">Egységtesztek</a></li>
+          <li><a href="index.html#portfolio">IntelliJ</a></li>
+          <li><a href="index.html#pricing">Refaktorálás</a></li>
+          <li class="drop-down"><a href="">Továbbiak</a>
+            <ul>
+              <li><a href="index.html#faq">GYIK</a></li>
+              <li><a href="feladat1.html">1. Tesztelési feladat</a></li>
+              <li><a href="feladat2.html">2. Tesztelési feladat</a></li>
+              <li><a href="feladat3.html">3. Tesztelési feladat</a></li>
+              <li><a href="feladat4.html">4. Tesztelési feladat</a></li>
+              <li><a href="intellij.html">Egységtesztek IntelliJ</a></li>
+              <li><a href="linkek.html">Hasznos linkek</a></li>
+            </ul>
+          </li>
+          <li><a href="index.html#contact">Kapcsolat</a></li>
+
         </ul>
       </nav>
 
@@ -172,12 +190,60 @@
                 Itt láthatod a teszteseteket és a produkciós kódot is:
               </p>
               <p>
-              <div class="portfolio-img"><img src="assets/img/feladat4a.JPG" class="img-fluid" alt=""></div>
-              <div class="portfolio-img"><img src="assets/img/feladat4b.JPG" class="img-fluid" alt=""></div>
-              <div class="portfolio-img"><img src="assets/img/feladat4c.JPG" class="img-fluid" alt=""></div>
+<pre>
+  import org.junit.jupiter.api.DisplayName;
+  import org.junit.jupiter.api.Test;
+  import static org.junit.jupiter.api.Assertions.*;
+  /**
+   * @author koviildi
+   * @version 1.0
+   */
+  public class ProjectHaromsz {
+      @Test
+      @DisplayName("Háromszög típus meghatározásának tesztelése")
+      public void test_HaromszogTipus(){
+          assertEquals("nem háromszög", haromszog(2,5,0));
+          assertEquals("nem háromszög", haromszog(2,0,9));
+          assertEquals("nem háromszög", haromszog(-1,5,8));
+          assertEquals("nem háromszög", haromszog(-5,-7,-6));
+          assertEquals("nem háromszög", haromszog(5,0,7));
+          assertEquals("nem háromszög", haromszog(0,0,0));
+          assertEquals("nem háromszög", haromszog(150,190,800));
+          assertEquals("nem háromszög", haromszog(150,80,1190));
+          assertEquals("nem háromszög", haromszog(-20,-20,-20));
+          assertEquals("nem háromszög", haromszog(10,15,80));
+          assertEquals("Általános háromszög", haromszog(15,25,30));
+          assertEquals("Egyenlő szárú háromszög", haromszog(20,20,30));
+          assertEquals("Egyenlő oldalú háromszög", haromszog(20,20,20));
+      }
+  
+      /**
+       * A háromszög típusának meghatározását végző metódus.
+       * @param a háromszög egyik oldalának hossza,
+       * @param b a háromszög második oldalának hossza,
+       * @param c a háromszög harmadik oldalának hossza.
+       * @return "nem háromszög" ha a háromszög két oldalának összege nem nagyobb mint
+       * a harmadik oldal, vagy nulla, vagy negatív hosszúságú bármelyik oldal, különben
+       * Általános, Egyenlő szárú vagy Egyenlő oldalú háromszög értékkel tér vissza.
+       */
+      private String haromszog(int a, int b, int c) {
+          if (a+b<=c || a+c<=b || b+c<=a || a<=0 || b<=0 || c<=0)
+              return "nem háromszög";
+          if (a == b && b ==c)
+              return "Egyenlő oldalú háromszög";
+          if (a == b || a ==c)
+              return "Egyenlő szárú háromszög";
+          else
+              return "Általános háromszög";
+  
+      }
+  
+  }
+  
+  
+</pre>
               </p>
               <p>
-                A képek nagyításához válaszd a jobb egérgomb "kép megnyitása új lapon" lehetőséget!"
                 A feladatokat a megoldásokkal a lap alján található link segítségével bármikor, egyben letöltheted!
               </p>
               <a href="index.html" class="btn-learn-more">Ugrás a főoldalra!</a>

@@ -43,6 +43,7 @@
 
 
   <header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
+    
     <div class="container d-flex align-items-center">
 
       <div class="logo mr-auto">
@@ -51,7 +52,24 @@
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="index.html">Vissza a főoldalra!</a></li>
+          <li class="active"><a href="index.html">Tartalom</a></li>
+          <li><a href="index.html#about">TDD alapok</a></li>
+          <li><a href="index.html#services">Egységtesztek</a></li>
+          <li><a href="index.html#portfolio">IntelliJ</a></li>
+          <li><a href="index.html#pricing">Refaktorálás</a></li>
+          <li class="drop-down"><a href="">Továbbiak</a>
+            <ul>
+              <li><a href="index.html#faq">GYIK</a></li>
+              <li><a href="feladat1.html">1. Tesztelési feladat</a></li>
+              <li><a href="feladat2.html">2. Tesztelési feladat</a></li>
+              <li><a href="feladat3.html">3. Tesztelési feladat</a></li>
+              <li><a href="feladat4.html">4. Tesztelési feladat</a></li>
+              <li><a href="intellij.html">Egységtesztek IntelliJ</a></li>
+              <li><a href="linkek.html">Hasznos linkek</a></li>
+            </ul>
+          </li>
+          <li><a href="index.html#contact">Kapcsolat</a></li>
+
         </ul>
       </nav>
 
@@ -166,15 +184,87 @@
                 <br>
                 Itt láthatod a teszteseteket és a produkciós kódot is:
               </p>
+<pre>
+  import org.junit.jupiter.api.DisplayName;
+  import org.junit.jupiter.api.Test;
+  import static org.junit.jupiter.api.Assertions.*;
+  /**
+   * @author koviildi
+   * @version 1.0
+   */
+  public class ProjectEmail {
+  
+      /**
+       *Bemeneti érték a szöveg, ami jobb esetben egy valós e-mail cím
+       * Egy darab @ karaktert és minimum egy darab pontot tartalmaz.
+       * Szóköz, illetve ékezetes betű nem lehet benne!
+       * Ha megfelelő a formátum, akkor "jó email cím" értékkel, ellenkező esetben
+       * pedig "nem jó email" értékkl tér vissza.
+       * Kategóriák:
+       * - se @, se pont nincs benne
+       * - egy @ van benne, pont nincs
+       * - @ nincs, pont van
+       * - 2 db @ van benne
+       * - van benne ékezetes karakter
+       * - van benne szóköz
+       * - végül a megfelelő formátum
+       *
+       */
+      @Test
+      @DisplayName("Email cím helyességének tesztelése")
+      public void test_gyak(){
+          assertEquals("nem jó email", nagyobb("ajkdjfé"));
+          assertEquals("nem jó email", nagyobb("dakdfj@dfd"));
+          assertEquals("nem jó email", nagyobb("ajkdjfé.hu"));
+          assertEquals("nem jó email", nagyobb("teszt@gmail@.hu"));
+          assertEquals("nem jó email", nagyobb("dakdfj@éfd.hu"));
+          assertEquals("nem jó email", nagyobb("dakdfj@Éfd.hu"));
+          assertEquals("nem jó email", nagyobb("fdjk@f@j dksl.hu"));
+          assertEquals("jó email cím", nagyobb("teszt@teszt.hu"));
+      }
+  
+      /**
+       * Az email cím vizsgálatát végző metódus.
+       * A helyes e-mail cím formátum egy darab @ karaktert tartalmaz és minimum egy db pont van benne.
+       * Ezen kívül szóközt és ékezetes karaktereket nem tartalmazhat!
+       * @param sz a megadott szöveg, mint vizsgálandó email cím.
+       * @return "nem jó email", ha a megadott karakterekből több vagy kevesebb van,
+       * ha szóközt tartalmaz, vagy ha van benne ékezetes karakter.
+       * különben "jó email cím" értékkel tér vissza.
+       */
+      private String nagyobb(String sz) {
+          int dbk = 0;
+          int dbp =0;
+          int dbsz = 0;
+          int dbek = 0;
+          if (sz == null || sz.length() == 0)
+              return "nem jó email";
+          for (int i = 0; i <sz.length(); i++){
+              if (sz.charAt(i)=='@')
+                  dbk++;
+              if (sz.charAt(i)=='.')
+                  dbp++;
+              if (sz.charAt(i)==' ')
+                  dbsz++;
+              if (sz.charAt(i)=='é' || sz.charAt(i)=='á' || sz.charAt(i)=='ű'
+                      || sz.charAt(i)=='ú' || sz.charAt(i)=='ő'|| sz.charAt(i)=='ó'
+                      || sz.charAt(i)=='ü' || sz.charAt(i)=='ö')
+                  dbek++;
+              if (sz.charAt(i)=='É' || sz.charAt(i)=='Á' || sz.charAt(i)=='Ű'
+                      || sz.charAt(i)=='Ú' || sz.charAt(i)=='Ő'|| sz.charAt(i)=='Ó'
+                      || sz.charAt(i)=='Ü' || sz.charAt(i)=='Ö')
+                  dbek++;
+          }
+          if (dbk==1 && dbp>=1 && dbsz==0 && dbek==0)
+              return "jó email cím";
+          else
+              return "nem jó email";
+      }
+  }
+  
+  
+</pre>
               <p>
-              <div class="portfolio-img"><img src="assets/img/feladat2a.JPG" class="img-fluid" alt=""></div>
-              <div class="portfolio-img"><img src="assets/img/feladat2b.JPG" class="img-fluid" alt=""></div>
-              <div class="portfolio-img"><img src="assets/img/feladat2c.JPG" class="img-fluid" alt=""></div>
-              <div class="portfolio-img"><img src="assets/img/feladat2d.JPG" class="img-fluid" alt=""></div>
-              <div class="portfolio-img"><img src="assets/img/feladat2e.JPG" class="img-fluid" alt=""></div>
-              </p>
-              <p>
-                A képek nagyításához válaszd a jobb egérgomb "kép megnyitása új lapon" lehetőséget!"
                 A feladatokat a megoldásokkal a lap alján található link segítségével bármikor, egyben letöltheted!
               </p>
               <a href="feladat3.html" class="btn-learn-more">Ugrás a következő feladatra!</a>
