@@ -187,7 +187,7 @@
       }
     }
   });
-
+  
   // Portfolio details carousel
   $(".portfolio-details-carousel").owlCarousel({
     autoplay: true,
@@ -209,4 +209,9 @@
     aos_init();
   });
 
+
+  $('#ccright').fadeOut(20000);
+
+
 })(jQuery);
+

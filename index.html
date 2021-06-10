@@ -9,16 +9,16 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
-  
+
   <link href="img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  
+
   <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
     rel="stylesheet">
 
-  
+
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
@@ -41,7 +41,7 @@
 
 <body>
   <header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
-    
+
     <div class="container d-flex align-items-center">
 
       <div class="logo mr-auto">
@@ -50,23 +50,22 @@
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="index.html">Tartalom</a></li>
-          <li><a href="#about">TDD alapok</a></li>
-          <li><a href="#services">Egységtesztek</a></li>
-          <li><a href="#portfolio">IntelliJ</a></li>
-          <li><a href="#pricing">Refaktorálás</a></li>
-          <li class="drop-down"><a href="">Továbbiak</a>
+          <li><a href="index.html#about">TDD alapok</a></li>
+          <li><a href="index.html#services">Egységtesztek</a></li>
+          <li><a href="index.html#portfolio">IntelliJ</a></li>
+          <li><a href="index.html#pricing">Refaktorálás</a></li>
+          <li class="drop-down"><a href="">Feladatok</a>
             <ul>
-              <li><a href="#faq">GYIK</a></li>
+              <li><a href="intellij.html">Egységtesztek IntelliJ</a></li>
               <li><a href="feladat1.html">1. Tesztelési feladat</a></li>
               <li><a href="feladat2.html">2. Tesztelési feladat</a></li>
               <li><a href="feladat3.html">3. Tesztelési feladat</a></li>
               <li><a href="feladat4.html">4. Tesztelési feladat</a></li>
-              <li><a href="intellij.html">Egységtesztek IntelliJ</a></li>
-              <li><a href="linkek.html">Hasznos linkek</a></li>
             </ul>
           </li>
-          <li><a href="#contact">Kapcsolat</a></li>
+          <li><a href="linkek.html">Hasznos linkek</a></li>
+          <li><a href="index.html#faq">GYIK</a></li>
+          <li><a href="index.html#contact">Kapcsolat</a></li>
 
         </ul>
       </nav>
@@ -82,7 +81,8 @@
       <div class="carousel-item active">
         <div class="carousel-container">
           <h2 class="animate__animated animate__fadeInDown">Összefoglaló a <span>Tesztelésről</span></h2>
-          <p class="animate__animated fanimate__adeInUp">Oldalunk kimondottan a <i><b>Java</b></i> programozási nyelvvel foglalkozik, de ennek ellenére a tesztelés
+          <p class="animate__animated fanimate__adeInUp">Oldalunk kimondottan a <i><b>Java</b></i> programozási nyelvvel
+            foglalkozik, de ennek ellenére a tesztelés
             más nyelv esetén is működik. A tesztelés a szoftverfejlesztés elengedhetetlen része. A
             programozás humán tevékenység, melynek során a legnagyobb körültekintés ellenére is elkövetünk hibákat.
             Ezért minden szoftvert alaposan tesztelni szükséges. Némely vállalatok dedikált tesztelőcsapattal dolgoznak.
@@ -219,11 +219,11 @@
           <h2>Egységtesztek</h2>
           <p>Miből áll?...</p>
           Egységteszt (unit test): az egységek, komponensek tesztelése, hogy
-            megbizonyosodjunk a működésének helyességéről. Cél, hogy feltárja
-            nincsenek-e tévműködések, feltáratlan hibák a belső algoritmusban,
-            adatkezelésben. A komponensek más rendszer komponensektől
-            függetlenül vannak tesztelve. /az implementáló feladata, felelőssége/
-            (a mondat forrása:<a href="https://vik.wiki/Kezd%C5%91lap" target="_blanc"> VIK Viki</a>)
+          megbizonyosodjunk a működésének helyességéről. Cél, hogy feltárja
+          nincsenek-e tévműködések, feltáratlan hibák a belső algoritmusban,
+          adatkezelésben. A komponensek más rendszer komponensektől
+          függetlenül vannak tesztelve. /az implementáló feladata, felelőssége/
+          (a mondat forrása:<a href="https://vik.wiki/Kezd%C5%91lap" target="_blanc"> VIK Viki</a>)
         </div>
 
         <div class="row">
@@ -231,7 +231,8 @@
             <div class="icon-box" data-aos="zoom-in-left">
               <div class="icon"><i class="las la-file-alt" style="color: #ff689b;"></i></div>
               <h4 class="title">1, Értelmezési tartomány</a></h4>
-              <p class="description">Adott két halmaz. Ha az egyik halmazból kiemelek egy elemet, majd ahhoz hozzárendelem a másik halmaz
+              <p class="description">Adott két halmaz. Ha az egyik halmazból kiemelek egy elemet, majd ahhoz
+                hozzárendelem a másik halmaz
                 egyetlen elemét, akkor ezt a hozzárendelést függvénynek nevezzük.
                 Amihez a függvény hozzá tud rendelni valamilyen értéket, azt nevezzük a függvény értelmezési
                 tartományának. Először is meghatározzuk a bemenet értelmezési tartományát.</p>
@@ -251,7 +252,8 @@
               <div class="icon"><i class="las la-file-alt" style="color: #3fcdc7;"></i></div>
               <h4 class="title">3, Értékpárok</a></h4>
               <p class="description">Értékpárok meghatározása, azaz adott bemenetre milyen kimenet legyen. Olyan
-                értékpárokat kell válogatni, amik jellemzőek az adott metódus, vagy másnéven függvény megvalósításához.</p>
+                értékpárokat kell válogatni, amik jellemzőek az adott metódus, vagy másnéven függvény megvalósításához.
+              </p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 mt-5">
@@ -268,14 +270,16 @@
             <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="400">
               <div class="icon"><i class="las la-file-alt" style="color: #d6ff22;"></i></div>
               <h4 class="title">5, Implementáció</a></h4>
-              <p class="description">Implementációs kód elkészítése. A metódus megírása, azaz a függvény elkészítése.</p>
+              <p class="description">Implementációs kód elkészítése. A metódus megírása, azaz a függvény elkészítése.
+              </p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 mt-5">
             <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="500">
               <div class="icon"><i class="las la-file-alt" style="color: #4680ff;"></i></div>
               <h4 class="title">6, Tesztelés</a></h4>
-              <p class="description">Tesztelünk... Ha jó, akkor haladunk tovább, ha hibás, akkor viszont vissza kell lépni hibát keresni. Implementációs kód javítása, módosítása.</p>
+              <p class="description">Tesztelünk... Ha jó, akkor haladunk tovább, ha hibás, akkor viszont vissza kell
+                lépni hibát keresni. Implementációs kód javítása, módosítása.</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 mt-5">
@@ -331,7 +335,8 @@
                 <br>
                 -ősosztályok készítése
                 <br>
-                -interfészek létrehozása</p>
+                -interfészek létrehozása
+              </p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 mt-5">
@@ -609,6 +614,7 @@
           <p>Lépjen kapcsolatba Velünk!</p>
         </div>
 
+        
         <div class="row mt-5">
 
           <div class="col-lg-4" data-aos="fade-right">
@@ -632,17 +638,16 @@
           </div>
 
           <div class="col-lg-8 mt-5 mt-lg-0" data-aos="fade-left">
-            
+
 
           </div>
 
         </div>
 
       </div>
-    </section>
+    </section>    
 
   </main>
-  
 
   <footer id="footer">
     <div class="container">
@@ -650,12 +655,22 @@
       <div class="credits">
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> & <a href="mailto:rekalaca@gmail.com">[
           rekalaca ]</a>
-          <br>
-          <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Licenc" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Juhászné Kovács Ildikó & Rékási László</span> <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">TDD Edu</span> című műve <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Nevezd meg! 4.0 Nemzetközi Licenc</a> alatt van.                    
+        <br>
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Licenc"
+            style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span
+          xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Juhászné Kovács Ildikó & Rékási
+          László</span> <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">TDD Edu</span> című műve <a
+          rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Nevezd meg! 4.0 Nemzetközi
+          Licenc</a> alatt van.
       </div>
     </div>
-    <div class="ccright">
-      <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Licenc" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Juhászné Kovács Ildikó & Rékási László</span> <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">TDD Edu</span> című műve <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Nevezd meg! 4.0 Nemzetközi Licenc</a> alatt van.            
+    <div id="ccright" class="ccright">
+      <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Licenc"
+          style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span
+        xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Juhászné Kovács Ildikó & Rékási
+        László</span> <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">TDD Edu</span> című műve <a
+        rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Nevezd meg! 4.0 Nemzetközi
+        Licenc</a> alatt van.
     </div>
   </footer>
 

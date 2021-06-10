@@ -1645,10 +1645,12 @@ hr {
 }
 
 #footer .ccright {
-  font-size: 10px;
-  color: rgb(233, 132, 24);
+  font-size: 11px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: left;
+  color: rgb(65, 169, 44);
   position: fixed;
-  top: 200px;
+  top: 400px;
   right: 0;
   width: 75px;
   height: 66px;
@@ -1658,4 +1660,10 @@ hr {
   text-align: left;
   font-size: 14px;
   margin-left: 38px;
+}
+
+.code{
+  background-color: #e6e6e6;
+  color: green;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
