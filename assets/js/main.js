@@ -210,7 +210,7 @@
   });
 
 
-  $('#ccright').delay(10000).fadeOut(500);
+  $('#ccright').delay(10000).fadeOut(400);
 
 
 })(jQuery);
